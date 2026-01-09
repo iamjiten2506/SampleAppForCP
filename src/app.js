@@ -14,7 +14,7 @@ app.get('/health', (req, res) => {
 // Main endpoint
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello from CI/CD Demo App!',
+    message: 'Hello from CI/CD Demo App! Today is Friday',
     version: '1.0.0',
     environment: process.env.NODE_ENV || 'production'
   });
@@ -23,5 +23,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
+
 
 module.exports = app;
