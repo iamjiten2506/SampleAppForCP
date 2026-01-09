@@ -6,16 +6,26 @@ phases:
       nodejs: 18
     commands:
       - echo "Installing dependencies..."
-      - cd src && npm install
+      - echo "Current directory:"
+      - pwd
+      - echo "Directory contents:"
+      - ls -la
+      - cd src && npm install && cd ..
   
   pre_build:
     commands:
       - echo "Running tests..."
-      - cd src && npm test
+      - echo "Current directory:"
+      - pwd
+      - echo "Directory contents:"
+      - ls -la
+      - cd src && npm test && cd ..
   
   build:
     commands:
       - echo "Build phase - no compilation needed for Node.js"
+      - echo "Final directory structure:"
+      - find . -type f -name "*.js" -o -name "*.json" -o -name "*.yml"
   
   post_build:
     commands:
