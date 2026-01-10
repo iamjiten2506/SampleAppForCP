@@ -14,7 +14,7 @@ app.get('/health', (req, res) => {
 // Main endpoint
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello from CI/CD Demo App! Today is Friday the 13th! I'm off from Sunday',
+    message: 'Hello from CI/CD Demo App! Today is Saturday',
     version: '1.0.0',
     environment: process.env.NODE_ENV || 'production'
   });
@@ -26,5 +26,6 @@ app.listen(port, () => {
 
 
 module.exports = app;
+
 
 
